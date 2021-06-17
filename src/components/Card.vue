@@ -66,6 +66,7 @@ export default {
 .flag_container{
   display: flex;
   justify-content: flex-end;
+  font-size: 12px;
 }
 
 .flag {

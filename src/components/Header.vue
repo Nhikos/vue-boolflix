@@ -14,7 +14,7 @@
         <input
         v-model="keywords"
         type="text"
-        placeholder="cerca un film"
+        placeholder="cerca"
         @keyup.enter="$emit('actionSearch', keywords)"
         >
         <i class="fas fa-search find" @click ="$emit('actionSearch', keywords)"></i>
