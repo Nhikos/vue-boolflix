@@ -58,7 +58,6 @@ export default {
       Promise.all([getPopularMovies, getPopularSeries]).then((res) => {
                 self.popularMovies = res[0].data.results;
                 self.popularSeries = res[1].data.results;
-                console.log(res);
             });
   },
 

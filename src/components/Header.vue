@@ -2,7 +2,7 @@
   <div class="header">
       <div class="header-left">
         <img class="img-logo-container" src="../assets/logo_netflix.png" alt="">
-        <p>
+        <p class="header_actions">
             <span>Home</span>
             <span>Serie TV</span>
             <span>Film</span>
@@ -17,7 +17,7 @@
         placeholder="cerca un film"
         @keyup.enter="$emit('actionSearch', keywords)"
         >
-      <button @click ="$emit('actionSearch', keywords)">Cerca</button>
+        <i class="fas fa-search find" @click ="$emit('actionSearch', keywords)"></i>
       </div>
   </div>
 </template>
@@ -49,15 +49,20 @@ export default {
     .header-left {
         display: flex;
         align-items: center;
+        width: 45%;
     }
 
     .header-right {
         display: flex;
+        align-items: center;
         margin-right: 50px;
     }
 
     input {
+        height: 25px;
         margin-right: 30px;
+        padding-left: 5px;
+        border-radius: 10px;
     }
 
     span {
@@ -67,13 +72,40 @@ export default {
     }
 
     .img-logo-container {
-        width: 190px;
-        margin-left: 35px;
+        width: 232px;
+        margin-left: 5%;
         cursor: pointer;
     }
 
-    button {
+    .find {
+        font-size: 22px;
+        color: white;
+        margin-right: 10px;
+        margin-left: 5px;
         cursor: pointer;
+    }
+
+    @media screen and (max-width: 1500px) {
+    .header_actions {
+        display: none;
+    }
+    
+}
+
+    @media screen and (max-width: 500px) {
+        .img-logo-container {
+            width: 100px;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .header-right {
+            display: flex;
+            margin-right: 15px;
+        }
+        input {
+            margin-right: 5px;
+        }
     }
     
 </style>

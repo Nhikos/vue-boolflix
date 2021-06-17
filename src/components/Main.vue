@@ -1,7 +1,7 @@
 <template>
   <div class="main">
       <section>
-        <video width="960" height="720" autoplay muted controls src="../assets/Dark_trailer.mp4"
+        <video width="960" height="600" autoplay muted controls src="../assets/Dark_trailer.mp4"
         type="Dark_trailer/mp4">
         </video>
       </section>
@@ -88,7 +88,7 @@ export default {
 h2 {
     text-transform: uppercase;
     font-size: 28px;
-    margin: 20px 5px 15px;
+    margin: 20px 18px 15px;
     color: white;
 }
 
@@ -111,5 +111,7 @@ video {
     width: 100%;
     object-fit: cover;
 }
+
+
 
 </style>
