@@ -85,6 +85,10 @@ export default {
         cursor: pointer;
     }
 
+    .header_actions {
+        margin-left: 45px;
+    }
+
     @media screen and (max-width: 1500px) {
     .header_actions {
         display: none;
