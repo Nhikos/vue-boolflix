@@ -1,12 +1,22 @@
 <template>
   <div class="main">
-      <section v-if="cards.length > 0" class="movies-container">
+      <section v-if="films.length > 0" class="movies-container">
           <h2>films</h2>
           <div class="movies">
             <Card 
-            v-for="card in cards"
-            :key = "card.id"
-            :item = "card"
+            v-for="film in films"
+            :key = "film.id"
+            :item = "film"
+            />
+          </div>
+      </section>
+      <section v-if="films.length > 0" class="movies-container">
+          <h2>TV Series</h2>
+          <div class="series">
+            <Card 
+            v-for="tv_serie in tv_series"
+            :key = "tv_serie.id"
+            :item = "tv_serie"
             />
           </div>
       </section>
@@ -21,7 +31,8 @@ export default {
     name: 'Main',
 
     props: {
-        "cards": Array
+        "films": Array,
+        "tv_series": Array
     },
 
     components: {
@@ -37,7 +48,8 @@ export default {
     background-color: lightgrey;
 }
 
-.movies {
+.movies,
+.series {
     display: flex;
     align-content: flex-start;
     flex-wrap: wrap;

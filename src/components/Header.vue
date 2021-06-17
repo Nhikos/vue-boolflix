@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-      <span>ciao</span>
+      <!-- <img src="../assets/logo_netflix.png" alt=""> -->
       <input
        v-model="keywords"
        type="text"

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header @actionSearch="search" />
-    <Main :cards="movies" />
+    <Main :films="movies" :tv_series="series"  />
   </div>
 </template>
 
@@ -57,6 +57,9 @@ export default {
 </script>
 
 <style lang="scss">
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+
 * {
   box-sizing: border-box;
   margin: 0;
